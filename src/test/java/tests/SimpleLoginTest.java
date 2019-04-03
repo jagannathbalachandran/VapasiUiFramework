@@ -1,13 +1,14 @@
 package tests;
 
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -28,7 +29,7 @@ public class SimpleLoginTest {
     @FindBy(id = "link-to-login")
     WebElement login_link;
 
-    @Before
+    @BeforeTest
     public void setUp(){
 
         String currentUsersWorkingDir = System.getProperty("user.dir");
@@ -51,7 +52,7 @@ public class SimpleLoginTest {
 
 
 
-    @After
+    @AfterTest
     public void tearDown(){
 
         driver.close();
