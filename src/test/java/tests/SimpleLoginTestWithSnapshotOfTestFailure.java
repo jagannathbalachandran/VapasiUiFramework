@@ -19,17 +19,6 @@ public class SimpleLoginTestWithSnapshotOfTestFailure {
 
     ChromeDriver driver;
 
-//    @FindBy(id= "spree_user_email")
-//    WebElement user;
-//
-//    @FindBy(id="spree_user_password")
-//    WebElement password;
-//
-//    @FindBy(name = "commit")
-//    WebElement submit;
-//
-//    @FindBy(id = "link-to-login")
-//    WebElement login_link;
 
     String currentUsersWorkingDir = System.getProperty("user.dir");
     private String resultsDir;
@@ -66,14 +55,12 @@ public class SimpleLoginTestWithSnapshotOfTestFailure {
         driver.quit();
 
     }
-
-
+    
     private void takeScreenshot(ITestResult result) {
 
         System.out.println("Taking screenshot");
         File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         try {
-            // now copy the  screenshot to desired location using copyFile //method
             FileUtils.copyFile(src, new File(resultsDir + "/" + result.getName() + ".png"));
         }
 
@@ -84,9 +71,6 @@ public class SimpleLoginTestWithSnapshotOfTestFailure {
         }
     }
 
-    public WebDriver getDriver()
-    {
-        return driver;
-    }
+
 
 }
