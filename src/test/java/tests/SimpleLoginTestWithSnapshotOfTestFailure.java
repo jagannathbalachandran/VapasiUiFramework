@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SimpleLoginTestWithSnapshotOfTestFailure {
 
-    ChromeDriver driver;
+    WebDriver driver;
 
 
     String currentUsersWorkingDir = System.getProperty("user.dir");
@@ -55,7 +55,7 @@ public class SimpleLoginTestWithSnapshotOfTestFailure {
         driver.quit();
 
     }
-    
+
     private void takeScreenshot(ITestResult result) {
 
         System.out.println("Taking screenshot");
