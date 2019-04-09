@@ -17,5 +17,4 @@ public class SimpleLoginTestExtendingBaseTest extends BaseTestCase {
         driver.findElement(By.name("commit")).click();
     }
 
-
 }
