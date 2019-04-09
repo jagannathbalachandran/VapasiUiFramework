@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 import java.util.Iterator;
 import java.util.List;
 
+import static org.testng.Assert.assertTrue;
+
 
 public class SimpleAddProductToCartTestExtendingBaseTest extends BaseTestCase {
 
@@ -17,7 +19,7 @@ public class SimpleAddProductToCartTestExtendingBaseTest extends BaseTestCase {
 
         String aProduct = "Ruby on Rails Bag";
         addProductToCart("Bags", aProduct);
-        System.out.println(isProductInCart(aProduct));
+        assertTrue(isProductInCart(aProduct + "wohoo"), "Product " + aProduct + " not added in Cart");
     }
 
     private void addProductToCart(String category, String aProduct) {
